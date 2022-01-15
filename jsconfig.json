@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@components/*": [
+                "components/*"
+            ],
+            "@constants/*": [
+                "constants/*"
+            ],
+            "@svgs/*": [
+                "svgs/*"
+            ]
+        }
+    },
+    "exclude": [
+        "node_modules",
+        "public"
+    ]
+}
