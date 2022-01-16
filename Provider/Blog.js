@@ -1,7 +1,5 @@
-// import { BLOG_PATH } from '@constants/globals';
-import { BLOG_PATH } from '../constants/globals';
-const {BLOG_PATH} = require( '../constants/globals');
-const read = require('file-reader');
+import { BLOG_PATH } from '@constants/globals';
+import filereader from 'file-reader';
 
 console.log(BLOG_PATH);
 
@@ -14,10 +12,10 @@ class Blog {
     }
 
     all(){
-        // get blog path 
-        // read all
-        // store in object
-        // return
+        return (new Directory(this.blogPath))
+                    .byExtension('.md')
+                    .map(x => fileread(x))
+                    .map(x => x.objectify())
     }
 
     bySlug(slug){
