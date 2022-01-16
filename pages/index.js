@@ -27,7 +27,7 @@ export default function Home() {
             {
               urlIconPairs.map(({ icon, url }) => {
               return (
-                <Link href={url} passHref>
+                <Link href={url} passHref key={url}>
                   <a target="_blank">
                     <li className="cursor-pointer hover:bg-gray-100">
                       <i className={`fab fa-3x p-3 rounded ${icon}`}></i>
