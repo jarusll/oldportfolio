@@ -10,6 +10,9 @@
             ],
             "@svgs/*": [
                 "svgs/*"
+            ],
+            "@providers/*": [
+                "Provider/*"
             ]
         }
     },
