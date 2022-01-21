@@ -22,7 +22,7 @@ export default function Home() {
     <main className="self-center flex justify-center items-center h-screen w-screen">
       <button className="absolute top-0 right-0 m-1"
         onClick={() => setTheme(theme == "dark" ? "light" : "dark")}>
-        <i class="fas fa-adjust p-2 hover:bg-gray-300 dark:hover:bg-gray-800 rounded-full transition-colors"></i>
+        <i className="fas fa-adjust p-2 hover:bg-gray-300 dark:hover:bg-gray-800 rounded-full transition-colors"></i>
       </button>
       <article className="grid-cols-1">
         <h1 className="uppercase text-5xl nunito text-center">
