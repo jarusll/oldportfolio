@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { GITHUB_URL, GOOGLE_URL, LINKEDIN_URL } from "@constants/urls.js";
+import { useTheme } from 'next-themes';
 
 export default function Home() {
   const urlIconPairs = [
@@ -16,8 +17,13 @@ export default function Home() {
       icon: 'fa-linkedin'
     }
   ]
+  const {theme, setTheme} = useTheme()
   return (
     <main className="self-center flex justify-center items-center h-screen w-screen">
+      <button className="absolute top-0 right-0 m-1"
+        onClick={() => setTheme(theme == "dark" ? "light" : "dark")}>
+        <i class="fas fa-adjust p-2 hover:bg-gray-400 rounded-full transition-colors"></i>
+      </button>
       <article className="grid-cols-1">
         <h1 className="uppercase text-5xl nunito text-center">
           Suraj Yadav

@@ -1,9 +1,14 @@
-import '../styles/globals.css'
+import { ThemeProvider } from 'next-themes';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import '../styles/globals.css'
 // import App from 'next/app'
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <ThemeProvider attribute="class">
+      <Component {...pageProps} />
+    </ThemeProvider>
+  )
 }
 
 // Only uncomment this method if you have blocking data requirements for
