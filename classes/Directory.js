@@ -1,8 +1,10 @@
-// import fs from 'fs';
-// import path from 'path';
 const fs = require('fs')
 const path = require('path')
+import File from '@classes/File'
 
+/*
+    I am a directory, I list out files. 
+*/
 class Directory {
 
     constructor(dirPath){
@@ -13,13 +15,8 @@ class Directory {
     allFiles(){
         this.files = fs.readdirSync(this.path, {encoding: 'utf-8', withFileTypes: true})
                 .filter(x => x.isFile())
-                .map(x => path.resolve(this.path, x.name))
-        return this;
-    }
-
-    byExtension(ext){
-        this.files = this.allFiles().files.filter(x => path.extname(x).toLocaleLowerCase() == ext)
-        return this;
+                .map(x => new File(path.resolve(this.path, x.name)))
+        return this.files
     }
 
 }

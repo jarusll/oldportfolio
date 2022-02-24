@@ -11,8 +11,11 @@
             "@svgs/*": [
                 "svgs/*"
             ],
-            "@providers/*": [
-                "Provider/*"
+            "@classes/*": [
+                "classes/*"
+            ],
+            "@hocs/*": [
+                "hocs/*"
             ]
         }
     },

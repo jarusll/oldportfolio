@@ -15,14 +15,12 @@ a {
   box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
-
-.nunito {
-  font-family: 'Nunito Sans', sans-serif;
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* @import url('font-awesome/css/font-awesome.min.css'); */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+
+.ibm_plex {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
